@@ -10,8 +10,9 @@ class Panda(Animal):
     def action(self):
         return "sleeps all day"
 
-    def test_panda():
-        assert self.name() == "Sally"
-        assert self.species() == "Panda"
-        assert self.sound() == "Hellooo"
-        assert self.action() == "sleeps all day"
+def test_Panda():
+    s = Panda("Sally")
+    assert s.name == "Sally"
+    assert s.species == "Panda"
+    assert s.sound() == "Hellooo"
+    assert s.action() == "sleeps all day"
